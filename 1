@@ -1,0 +1,11 @@
+import time
+start = time.time()
+num = [12, 9, -7.5, -98, 29, -1, 12.83, -19.10, 28.2, 22]
+n = len(num)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if num[j] > num[j+1]:
+            num[j], num[j+1] = num[j+1], num[j]
+print(num)
+
+print("run time:" + str(time.time() - start))
